@@ -117,21 +117,21 @@ const points = games => games.reduce((output,current) => {      // Utilizing red
 // }
 
 // My answer:
-function points(games) {        // Could've used for...of loop or forEach() method to access an array easier
-    let total = 0;
-    for (let i = 0; i < games.length; i++) {
-      let x = Number((games.slice(i, i+1).toString()[0]));
-      let y = Number((games.slice(i, i+1).toString()[2]));
-      if (x > y) {
-      total += 3
-      } else if (x === y) {
-      total += 1
-      } else if (x < y) {
-      total += 0
-      }
-    }
-    return total;
-  }
+// function points(games) {        // Could've used for...of loop or forEach() method to access an array easier
+//     let total = 0;
+//     for (let i = 0; i < games.length; i++) {
+//       let x = Number((games.slice(i, i+1).toString()[0]));
+//       let y = Number((games.slice(i, i+1).toString()[2]));
+//       if (x > y) {
+//       total += 3
+//       } else if (x === y) {
+//       total += 1
+//       } else if (x < y) {
+//       total += 0
+//       }
+//     }
+//     return total;
+//   }
 
 
 // Grade book
@@ -156,18 +156,41 @@ function getGrade (s1, s2, s3) {
 }
 
 // My answer:
-function getGrade(s1, s2, s3) {     // More explicit ig
-    let total = s1 + s2 + s3;
-    let average = total / 3;
-    if (average >= 0 && average < 60) {
-      return 'F';
-    } else if (average >= 60 && average < 70) {
-      return 'D';
-    } else if (average >= 70 && average < 80) {
-      return 'C';
-    } else if (average >= 80 && average < 90) {
-      return 'B';
-    } else if (average >= 90 && average <= 100) {
-      return 'A';
-    }
-  }
+// function getGrade(s1, s2, s3) {     // More explicit ig
+//     let total = s1 + s2 + s3;
+//     let average = total / 3;
+//     if (average >= 0 && average < 60) {
+//       return 'F';
+//     } else if (average >= 60 && average < 70) {
+//       return 'D';
+//     } else if (average >= 70 && average < 80) {
+//       return 'C';
+//     } else if (average >= 80 && average < 90) {
+//       return 'B';
+//     } else if (average >= 90 && average <= 100) {
+//       return 'A';
+//     }
+//   }
+
+// Convert a number into a string
+
+// Description
+// We need a function that can transform a string into a number. What ways of achieving this do you know?
+
+// Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
+
+// Examples
+// "1234" --> 1234
+// "605"  --> 605
+// "1405" --> 1405
+// "-7" --> -7
+
+// Best answer:
+let stringToNumber = function(str){
+  return parseInt(str);
+}
+
+// My answer:
+// const stringToNumber = function(str){    // Really similiar, eh
+//   return Number(str);
+// }
